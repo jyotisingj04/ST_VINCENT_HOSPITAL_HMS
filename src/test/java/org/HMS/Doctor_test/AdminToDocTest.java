@@ -41,11 +41,12 @@ public class AdminToDocTest extends BaseClass{
 	lp.adminLoginActions(adminLoginUserName,adminLoginPassword );
 	AdminAddDoctorPage ad=new AdminAddDoctorPage(driver);
 	ManageDoctorsPage md=new ManageDoctorsPage(driver);
+	//ad.docSpecialization();
 	ad.docFeature();
 	webDriverUtil.waitForElementInDOM(driver);
 	ad.addDoctorFeature();
-	WebElement element = ad.docSpecialization();
-	webDriverUtil.select(element, 2);
+	//WebElement element = ad.docSpecialization();
+	//webDriverUtil.select(element, 2);
 	ad.addDoctor(random, docName, clinicAddress, docFees, docContact, random+docEmail, docPassword, docConfirmPwd);
 	webDriverUtil.swithToAlertWindowAndAccpect(driver);
 	String fetchedtext = md.gettextfromwebElement(expectedResult, driver);

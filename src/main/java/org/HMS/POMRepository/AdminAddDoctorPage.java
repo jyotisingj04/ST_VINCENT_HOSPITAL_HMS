@@ -34,7 +34,7 @@ public class AdminAddDoctorPage {
 	  }
 	//business library
 	public void addDoctorFeature() {
-		docspecializ.click();
+	//	docspecializ.click();
 		docNameTxt.sendKeys("docName");
 		clinicAddTxt.sendKeys("clinicAddress");
 		docContTxt.sendKeys("docContact");
@@ -53,9 +53,8 @@ public class AdminAddDoctorPage {
 		cfrmPwdTxt.sendKeys(docConfirPwd);
 		submitBtn.click();
 	}
-	public WebElement docSpecialization() {
+	public void docSpecialization() {
 		docspecializ.click();
-		return docspecializ;
 		
 	}
 	public void docFeature() {
